@@ -2,10 +2,12 @@ import machine
 import utime
 import framebuf
 import random
-import ssd1306
 import math
+
 from neopixel import NeoPixel
-from constants import (
+
+from src.ssd1306 import SSD1306_I2C
+from src.constants import (
     OLED_SDA_PIN_NUM,
     OLED_SCL_PIN_NUM,
     OLED_WIDTH,
@@ -117,6 +119,7 @@ class Buzzer:
         self.enable = enable
         self.buzzer = None
 
+    # TODO CLEAN INITIALIZATION AND NAMING
     def _init_pwm(self):
         if self.buzzer is None:
             pin_obj = machine.Pin(self.pwm_pin_num)
@@ -704,7 +707,9 @@ class MatrixEffectsApp(App):  # Functional sounds, menu sounds handled by base
                     pass
             utime.sleep_ms(50)
 
-    def stop(self): super().stop(); self._clear_matrix()
+    def stop(self):
+        super().stop()
+        self._clear_matrix()
 
 
 class ClockApp(App):
@@ -1003,7 +1008,7 @@ class TelephoneApp(App):
 def main():
     i2c = machine.I2C(OLED_I2C_ID, scl=machine.Pin(OLED_SCL_PIN_NUM), sda=machine.Pin(OLED_SDA_PIN_NUM))
     try:
-        oled = ssd1306.SSD1306_I2C(OLED_WIDTH, OLED_HEIGHT, i2c, addr=OLED_I2C_ADDR)
+        oled = SSD1306_I2C(OLED_WIDTH, OLED_HEIGHT, i2c, addr=OLED_I2C_ADDR)
         oled.fill(0)
         oled.text("Loading...", 0, 0)
         oled.show()
