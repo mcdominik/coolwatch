@@ -1,0 +1,14 @@
+{
+  "device": "auto",
+  "main": "main.py",
+  "upload": {
+    "exclude": [
+      "**/__pycache__/**",
+      "**/*.pyc",
+      "**/*.md",
+      ".git/**",
+      ".vscode/**"
+    ],
+    "flatten": false
+  }
+}

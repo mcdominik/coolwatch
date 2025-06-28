@@ -3,7 +3,7 @@ import utime
 import machine
 
 from src.apps.app import App
-from constants import NOTES, OLED_WIDTH, TEMP_SENSOR_ADC_CHANNEL, TEMPERATURE_OFFSET
+from src.constants import NOTES, OLED_WIDTH, TEMP_SENSOR_ADC_CHANNEL, TEMPERATURE_OFFSET
 
 
 class TemperatureApp(App):

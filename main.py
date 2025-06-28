@@ -33,13 +33,15 @@ from src.constants import (
 
 def main():
     i2c = machine.I2C(OLED_I2C_ID, scl=machine.Pin(OLED_SCL_PIN_NUM), sda=machine.Pin(OLED_SDA_PIN_NUM))
+    oled = SSD1306_I2C(OLED_WIDTH, OLED_HEIGHT, i2c, addr=OLED_I2C_ADDR)
+    oled.fill(0)
     try:
-        oled = SSD1306_I2C(OLED_WIDTH, OLED_HEIGHT, i2c, addr=OLED_I2C_ADDR)
-        oled.fill(0)
         oled.text("Loading...", 0, 0)
         oled.show()
         utime.sleep_ms(500)
     except Exception as e:
+        oled.text("Error: {}".format(str(e)), 0, 0)
+        oled.show()
         print(f"OLED Error: {e}")
 
     display = DisplayManager(oled)

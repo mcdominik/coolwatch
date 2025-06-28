@@ -5,8 +5,8 @@ import math
 from neopixel import NeoPixel
 
 from src.apps.app import App
-from constants import (COLOR_BLACK, COLOR_ORANGE, COLOR_RED, COLOR_YELLOW, EXPLOSION_EFFECT, MATRIX_DEFAULT_BRIGHTNESS, MATRIX_DIGIT_PATTERNS,
-                       MATRIX_HEIGHT, MATRIX_NUM_PIXELS, MATRIX_PIN_NUM, MATRIX_WIDTH, NOTES, OLED_WIDTH)
+from src.constants import (COLOR_BLACK, COLOR_ORANGE, COLOR_RED, COLOR_YELLOW, EXPLOSION_EFFECT, MATRIX_DEFAULT_BRIGHTNESS, MATRIX_DIGIT_PATTERNS,
+                           MATRIX_HEIGHT, MATRIX_NUM_PIXELS, MATRIX_PIN_NUM, MATRIX_WIDTH, NOTES, OLED_WIDTH)
 
 
 class MatrixEffectsApp(App):  # Functional sounds, menu sounds handled by base

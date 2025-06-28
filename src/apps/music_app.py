@@ -2,7 +2,7 @@ import utime
 
 from src.apps.app import App
 
-from constants import BIRTHDAY_MELODY, IMPERIAL_MARCH_MELODY, PIRATES_MELODY
+from src.constants import BIRTHDAY_MELODY, IMPERIAL_MARCH_MELODY, PIRATES_MELODY
 
 
 class MusicApp(App):

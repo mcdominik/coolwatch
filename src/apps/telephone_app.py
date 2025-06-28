@@ -1,7 +1,7 @@
 import utime
 
 from src.apps.app import App
-from constants import NOTES, OLED_HEIGHT, OLED_WIDTH
+from src.constants import NOTES, OLED_HEIGHT, OLED_WIDTH
 
 
 class TelephoneApp(App):
