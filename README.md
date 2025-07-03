@@ -6,7 +6,7 @@ Just a watch, but cooler than yours.
 
 - [Introduction](#introduction)
 - [Features](#features)
-- [My Watch Design](#my-watch-design)
+- [Design](#my-watch-design)
 - [How It Works](#how-it-works)
 - [Installation](#installation)
 - [License](#license)
